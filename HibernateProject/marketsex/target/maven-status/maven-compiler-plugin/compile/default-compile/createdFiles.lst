@@ -1,0 +1,5 @@
+com\wolken\marketsex\dao\MarketDAOImpl.class
+com\wolken\marketsex\entity\MarketsDetailsEntity.class
+com\wolken\marketsex\dao\MarketDAO.class
+com\wolken\marketsex\MarketsTest.class
+com\wolken\marketsex\utils\HibernateUtils.class
