@@ -9,7 +9,7 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
           crossorigin="anonymous">
 		   <script src="main.js"></script>
-		  
+
 </head>
 <body>
 <header style="background-color:blue;display:flex;align-items:center;">
@@ -25,61 +25,66 @@
         <div class="col-lg-6">
 
             <form method="POST">
-           
+
                 <h1><b>Registration</b></h1>
-             
+
 
                 <div class="form-row">
                     <div class="form-group col-4">
-                        <label for="name_input">Name</label>
+                        <label for="t1">Name</label>
                     </div>
                     <div class="form-group col-8">
                         <input type="text" name="name" class="form-control"
-                               id="t1" placeholder="Enter your name">
+                               id="t1" placeholder="Enter your name"
+                               onblur="registration()">
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group col-4">
-                        <label for="email_input">Email</label>
+                        <label for="email">Email</label>
                     </div>
                     <div class="form-group col-8">
                         <input type="text" name="email" class="form-control"
-                               id="t2" placeholder="Enter your email">
-							
+                               id="t2" placeholder="Enter your email"
+							   onblur="registration()">
+
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group col-lg-4">
-                        <label for="password_input">Password</label>
+                        <label for="password">Password</label>
                     </div>
                     <div class="form-group col-lg-8">
                         <input type="password" name="password" class="form-control"
-                               id="t4" placeholder="Enter your password">
-							   
+                               id="t4" placeholder="Enter your password"
+							   onblur="registration()">
+
                     </div>
                 </div>
 				<div class="form-row">
                     <div class="form-group col-lg-4">
-                        <label for="password_input">Confirm Password</label>
+                        <label for="password">Confirm Password</label>
                     </div>
                     <div class="form-group col-lg-8">
                         <input type="password" name="password" class="form-control"
-                               id="t5" placeholder="Enter your Confirm password">
-							  
+                               id="t5" placeholder="Enter your Confirm password"
+							   onblur="registration()">
+
                     </div>
                 </div>
-               
+
 
                 <div class="form-row">
                     <div class="form-group col-4">
-                        <label for="contact_number_input">Contact Number</label>
+                        <label for="t3">Contact Number</label>
                     </div>
                     <div class="form-group col-8">
                         <input type="tel" name="contact_number" class="form-control"
                                id="t3"
-                               placeholder="Enter your contact number">
+                               placeholder="Enter your contact number"
+							   onblur="registration()">
                     </div>
                 </div>
 
@@ -106,7 +111,7 @@
                         <input type="radio" name="gender" id="gender_female_input">
                         <label for="gender_female_input">Female</label>
                     </div>
-             
+
                 </div>
 
                 <div class="form-row">
@@ -121,7 +126,7 @@
                         <input type="checkbox" name="status" id="status_married_input">
                         <label for="gender_female_input">Married</label>
                     </div>
-                   
+
                 </div>
 
 
@@ -154,7 +159,7 @@
                         <input type="reset" type="reset" name="reset" value="Reset" class="btn btn-outline-primary btn-block">
                             Reset
                         </input>
-						
+
                     </div>
                 </div>
 
@@ -174,7 +179,3 @@
 </div>
 </body>
 </html>
-
-
-
- <img src="https://www.freelogoservices.com/blog/wp-content/uploads/iStock-498632741.jpg"
