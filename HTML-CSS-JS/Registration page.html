@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Registration</title>
+	<script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+		   <script src="main.js"></script>
+		  
+</head>
+<body>
+<header style="background-color:blue;display:flex;align-items:center;">
+    <h1 class="mr-auto ml-5 my-2" style="display:inline;color:white">Facebook</h1>
+    <a class="ml-auto mr-5 btn btn-outline-primary" role="button" style="color:white">
+        LOGIN
+    </a>
+</header>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-6">
+
+            <form method="POST">
+           
+                <h1><b>Registration</b></h1>
+             
+
+                <div class="form-row">
+                    <div class="form-group col-4">
+                        <label for="name_input">Name</label>
+                    </div>
+                    <div class="form-group col-8">
+                        <input type="text" name="name" class="form-control"
+                               id="name_input" placeholder="Enter your name"
+							   onblur="t1">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-4">
+                        <label for="email_input">Email</label>
+                    </div>
+                    <div class="form-group col-8">
+                        <input type="text" name="email" class="form-control"
+                               id="email_input" placeholder="Enter your email"
+							   onblur="t2">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-4">
+                        <label for="password_input">Password</label>
+                    </div>
+                    <div class="form-group col-lg-8">
+                        <input type="password" name="password" class="form-control"
+                               id="password_input" placeholder="Enter your password"
+							   onblur="t4">
+                    </div>
+                </div>
+				<div class="form-row">
+                    <div class="form-group col-lg-4">
+                        <label for="password_input">Confirm Password</label>
+                    </div>
+                    <div class="form-group col-lg-8">
+                        <input type="password" name="password" class="form-control"
+                               id="password_input" placeholder="Enter your Confirm password"
+							   onblur="t5">
+                    </div>
+                </div>
+               
+
+                <div class="form-row">
+                    <div class="form-group col-4">
+                        <label for="contact_number_input">Contact Number</label>
+                    </div>
+                    <div class="form-group col-8">
+                        <input type="tel" name="contact_number" class="form-control"
+                               id="contact_number_input"
+                               placeholder="Enter your contact number">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-4">
+                        <label for="dob_input">Date of Birth</label>
+                    </div>
+                    <div class="form-group col-8">
+                        <input type="datetime-local" name="dob"
+                               class="form-control" id="dob_input"
+                               placeholder="Enter your date of birth">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-4">
+                        <label>Gender</label>
+                    </div>
+                    <div class="form-group col-3">
+                        <input type="radio" name="gender" id="gender_male_input">
+                        <label for="gender_male_input">Male</label>
+                    </div>
+                    <div class="form-group col-3">
+                        <input type="radio" name="gender" id="gender_female_input">
+                        <label for="gender_female_input">Female</label>
+                    </div>
+             
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-4">
+                        <label>Status</label>
+                    </div>
+                    <div class="form-group col-3">
+                        <input type="checkbox" name="status" id="status_single_input">
+                        <label for="gender_male_input">Single</label>
+                    </div>
+                    <div class="form-group col-3">
+                        <input type="checkbox" name="status" id="status_married_input">
+                        <label for="gender_female_input">Married</label>
+                    </div>
+                   
+                </div>
+
+
+                <div class="form-row">
+                    <div class="form-group col-lg-4">
+                        <label for="city_input">City</label>
+                    </div>
+                    <div class="form-group col-lg-8">
+                        <input type="text" name="city" class="form-control" id="city_input"
+                               placeholder="Enter your current city name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-4">
+                        <label for="country_input">Country</label>
+                    </div>
+                    <div class="form-group col-lg-8">
+                        <select id="country_input" class="form-control">
+                            <option>Indian</option>
+                            <option>Non-Indian</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-6">
+                        <input type="submit" value="Save" class="btn btn-outline-primary btn-block" onsubmit="registration()"></input>
+                    </div>
+                    <div class="col-6">
+                        <input type="reset" type="reset" name="reset" value="Reset" class="btn btn-outline-primary btn-block">
+                            Reset
+                        </input>
+						
+                    </div>
+                </div>
+
+            </form>
+            <br>
+        </div>
+
+        <div class="col-lg-6 py-5">
+            <img src="https://www.freelogoservices.com/blog/wp-content/uploads/iStock-498632741.jpg"
+                 class="img-fluid w-100 h-100">
+        </div>
+    </div>
+</div>
+
+<div style="background-color:blue;color:white;padding:1px;text-align:center;">
+    @Copyright Reserved 2021
+</div>
+</body>
+</html>
+
+
+
+ <img src="https://www.freelogoservices.com/blog/wp-content/uploads/iStock-498632741.jpg"
