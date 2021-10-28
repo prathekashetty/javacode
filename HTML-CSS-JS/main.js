@@ -1,70 +1,75 @@
 function registration()
 	{
 
-		var name= document.getElementById("t1").value;
-		var email= document.getElementById("t2").value;
-		var phoneNumber= document.getElementById("t3").value;
-		var pwd= document.getElementById("t4").value;
-		var cpwd= document.getElementById("t5").value;
-
-
-		var regex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
-		var letters = /^[A-Za-z]+$/;
-		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-	    var regEx = /^\+{0,2}([\-\. ])?(\(?\d{0,3}\))?([\-\. ])?\(?\d{0,3}\)?([\-\. ])?\d{3}([\-\. ])?\d{4}/;
-
-		if(name=='')
-		{
-			alert('Please enter your name');
-		}
-		else if(!letters.test(name))
-		{
-			alert('Name field required only alphabet characters');
-		}
-		else if(email=='')
-		{
-			alert('Please enter your user email id');
-		}
-		else if (!filter.test(email))
-		{
-			alert('Invalid email');
-		}
-
-         else if(phoneNumber.value.match(regEx))
-         {
-          alert("Please enter a valid phone number.");
-         }
-		else if(pwd=='')
-		{
-			alert('Please enter Password');
-		}
-		else if(cpwd=='')
-		{
-			alert('Enter Confirm Password');
-		}
-		else if(!regex .test(pwd))
-		{
-			alert ('Upper case, Lower case, Special character and Numeric letter are required in Password filed');
-		}
-		else if(pwd != cpwd)
-		{
-			alert ('Password not Matched');
-		}
-		else if(document.getElementById("t5").value.length < 6)
-		{
-			alert ('Password minimum length is 6');
-		}
-		else if(document.getElementById("t5").value.length > 12)
-		{
-			alert ('Password max length is 12');
-		}
-
-	}
-	function clearFunc()
-	{
-		document.getElementById("t1").value="";
-		document.getElementById("t2").value="";
-		document.getElementById("t3").value="";
-		document.getElementById("t4").value="";
-		document.getElementById("t5").value="";
-	}
+				    var name=$("#name").val();
+					var email=$("#email").val();
+					var password=$("#password").val();
+					var conPassword=$("#conPassword").val();
+					var contact=$("#contact").val();
+					var date=$('#dob').val();
+					var gender=$("input[name='gender']:checked").val();
+					var status=$('input[type=checkbox]:checked');
+					var country=$("#country").val();
+					var numbers = /^[0-9]+$/;
+			
+				   if(name.length !="" && name.length>3 && name.length<15 &&  && name.match(letters)) {
+						$("#errName").html('');
+					if(email.length>=6 && email.length<18 && email.length != "" && email.match(emailVal)) {
+							$("#errEmail").html('');
+					if(contact.length==10 && contact!="" && contact.match(numbers)) {
+								$("#errContact").html('');
+					
+					if(gender) {
+										$("#errGender").html('');
+					if(status.length>0) {
+											$("#status").html('');
+					if(date!="") {
+									$("#errDate").html('');
+					if(country!="") {
+					$("#errCountry").html('');
+					if(password.length>8 && password.length<16 && password.length !="" && password.match(letterNum)) {
+					 $("#errPassword").html('');
+					if(conPassword==password) {
+					 $("#errConPassword").html('');
+					 } 
+					 
+					 else {
+					$("#errConPassword").html('Password does not match');
+							 }
+					 } 
+					 
+					 else {
+					   $("#errPassword").html('Only character allowed');
+														}
+					 
+					   } else {
+							   $("#errCountry").html('Choose an option');
+													}
+					   } 
+												} 
+						}else {
+						  $("#status").html('Select status');
+											}
+						} else {
+								 $("#errGender").html('Select gender');
+										}
+									}
+						   } 
+						   
+						   else {
+							$("#errName").html('Please input alphabet characters only');
+								} 
+								
+								else {
+									 $("#errEmail").html('Input valid email');
+								}
+							} 
+							
+							else {
+							   
+							   $("#errContact").html('Input valid contact');
+							   }else {
+										$('#errDate').html('Enter DOB');
+									}
+						
+  }
