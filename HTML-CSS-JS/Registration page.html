@@ -35,7 +35,7 @@
                     </div>
                     <div class="form-group col-8">
                         <input type="text" name="name" class="form-control"
-                               id="t1" placeholder="Enter your name"
+                               id="name" placeholder="Enter your name"
                                onblur="registration()">
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                     </div>
                     <div class="form-group col-8">
                         <input type="text" name="email" class="form-control"
-                               id="t2" placeholder="Enter your email"
+                               id="email" placeholder="Enter your email"
 							   onblur="registration()">
 
                     </div>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="form-group col-lg-8">
                         <input type="password" name="password" class="form-control"
-                               id="t4" placeholder="Enter your password"
+                               id="password" placeholder="Enter your password"
 							   onblur="registration()">
 
                     </div>
@@ -69,7 +69,7 @@
                     </div>
                     <div class="form-group col-lg-8">
                         <input type="password" name="password" class="form-control"
-                               id="t5" placeholder="Enter your Confirm password"
+                               id="conPassword" placeholder="Enter your Confirm password"
 							   onblur="registration()">
 
                     </div>
@@ -78,11 +78,11 @@
 
                 <div class="form-row">
                     <div class="form-group col-4">
-                        <label for="t3">Contact Number</label>
+                        <label for="contact_number_input">Contact Number</label>
                     </div>
                     <div class="form-group col-8">
-                        <input type="tel" name="contact_number" class="form-control"
-                               id="t3"
+                        <input type="numbers" name="contact_number" class="form-control"
+                               id="contact"
                                placeholder="Enter your contact number"
 							   onblur="registration()">
                     </div>
@@ -94,7 +94,7 @@
                     </div>
                     <div class="form-group col-8">
                         <input type="datetime-local" name="dob"
-                               class="form-control" id="dob_input"
+                               class="form-control" id="date"
                                placeholder="Enter your date of birth">
                     </div>
                 </div>
@@ -104,11 +104,11 @@
                         <label>Gender</label>
                     </div>
                     <div class="form-group col-3">
-                        <input type="radio" name="gender" id="gender_male_input">
+                        <input type="radio" name="gender" id="gender">
                         <label for="gender_male_input">Male</label>
                     </div>
                     <div class="form-group col-3">
-                        <input type="radio" name="gender" id="gender_female_input">
+                        <input type="radio" name="gender" id="gender">
                         <label for="gender_female_input">Female</label>
                     </div>
 
