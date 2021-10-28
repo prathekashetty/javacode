@@ -1,29 +1,23 @@
 function registration()
 	{
-		var email= document.getElementById("t1").value;
-		
-		var pwd= document.getElementById("t2").value;
-	
-		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-	   
-		 if(email=='')
-		{
-			alert('Please enter your user email id');
-		}
-		else if (!filter.test(email))
-		{
-			alert('Invalid email');
-		}
+		    var email=$("#email").val();
+		    var pass=$("#pass").val();
+		    var emailValid = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/;
+		    var letters = /^[a-z]+$/;
+		    var letterNum = /^[a-zA-Z0-9]+$/;
 
-		else if(pwd=='')
-		{
-			alert('Please enter Password');
-		}
-		
 
-	}
-	function clearFunc()
-	{
-		document.getElementById("t1").value="";
-		document.getElementById("t2").value="";
-	}
+		   if(email.match(emailValid) && email.length>=6 && email.length<18 && email.length != "") {
+			$("#errEmail").html('');
+
+		   if(password.match(letterNum) && password.length>8 && password.length<16 && password.length !="")
+			{
+			    $("#errPass").html('');
+			} else {
+
+			    $("#errPass").html('Password not valid must have all types of characters');
+			}
+		    } else {
+			$("#errEmail").html('Email invalid');
+		    }
+}
